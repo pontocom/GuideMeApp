@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.ActivityCompat;
 import android.util.Log;
+import android.view.View;
 
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
@@ -52,5 +53,9 @@ public class MainActivity extends Activity implements OnMapReadyCallback {
 
             myMap.moveCamera(CameraUpdateFactory.newLatLngZoom(myPos, 15));
         }
+    }
+
+    public void clickOpenSettings(View view) {
+        startActivity(new Intent(MainActivity.this, SettingsActivity.class));
     }
 }
