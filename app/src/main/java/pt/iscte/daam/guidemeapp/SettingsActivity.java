@@ -16,7 +16,7 @@ public class SettingsActivity extends AppCompatActivity {
     protected ProgressBar pbSave;
     protected SharedPreferences appdata;
 
-    protected String defaultURL = "http://10.211.55.10:3000/";
+    protected String defaultURL = "http://10.211.55.10:3000";
     protected int mRange;
     protected String mURL;
 
@@ -26,7 +26,7 @@ public class SettingsActivity extends AppCompatActivity {
         setContentView(R.layout.activity_settings);
 
         appdata = getSharedPreferences("GuideMeAppData",0);
-        mRange = appdata.getInt("RANGE", 1);
+        mRange = appdata.getInt("RANGE", 50);
         mURL = appdata.getString("URL", defaultURL);
 
         sbRange = (SeekBar) findViewById(R.id.sBRange);
